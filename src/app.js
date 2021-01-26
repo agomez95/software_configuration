@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const { database } = require('./keys');
 
 //INITIALIZER
 const app = express();
@@ -35,5 +36,5 @@ app.use('/projects', require('./routes/project'));
 
 //SERVER
 app.listen(app.get('port'), ()=>{
-    console.log("Server on port:",app.get('port'));
+    console.log("SERVER ON PORT:",app.get('port'));
 });
