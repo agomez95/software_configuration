@@ -1,4 +1,9 @@
 const express = require('express');
-const project = express.Router();
+const pool = require('../database');
+const projects = express.Router();
 
-module.exports = project;
+projects.get('/new', (req,res) =>{
+    res.render('projects/new');
+});
+
+module.exports = projects;
