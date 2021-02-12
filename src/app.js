@@ -33,6 +33,7 @@ app.use((req,res,next) => {
 app.use(require('./routes/principal'));
 app.use(require('./routes/auth'));
 app.use('/projects', require('./routes/project'));
+app.use('/users', require('./routes/user'));
 
 //SERVER
 app.listen(app.get('port'), ()=>{

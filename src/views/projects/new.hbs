@@ -7,19 +7,18 @@
                     <h5 class="card-title text-center"><b>Nuevo Proyecto</b></h5>
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form action="/projects/new" method="POST">
                         <div class="form-group">
                             <label for="name_proyecto">Nombre:</label>
-                            <input type="text" class="form-control" id="projectname" placeholder="Enter the name of the project">
+                            <input type="text" class="form-control" name="projectname" id="projectname" placeholder="Enter the name of the project">
                         </div>
                         <div class="form-group">
                             <label for="name_proyecto">Descripcion:</label>
-                            <textarea class="form-control" id="description" rows="3" placeholder="Enter a small description of the project"></textarea>
+                            <textarea class="form-control" name="description" id="description" rows="3" placeholder="Enter a small description of the project"></textarea>
                         </div>
                         <div class="col text-center">
                             <button type="submit" class="btn btn-primary">Guardar</button>
-                        </div>
-                        
+                        </div>                        
                     </form>
                 </div>
             </div>

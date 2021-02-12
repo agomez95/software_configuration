@@ -31,4 +31,11 @@ ALTER TABLE projects
 ALTER TABLE projects
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
 
+CREATE TABLE projects_users(
+    project_id INT(11),
+    user_id INT(11),
+    CONSTRAINT fk_user FOREIGN KEY (project_id) REFERENCES projects(id),
+    CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
 DESCRIBE projects;
